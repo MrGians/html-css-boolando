@@ -29,35 +29,31 @@
 .w-50 {width: 50%;}
 .w-100 {width: 100%;}
 
-.h-50 {height: 50%;}
 .h-100 {height: 100%;}
 
-.py-10 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.px-10 {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.mx-15 {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-.my-15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /* Generics */
 header {color: var(--white);}
 
+main {padding-top: 70px;}
+
+footer {
+    height: 80px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
 nav {
     height: 70px;
     background-color: #FF6900;
     position: fixed;
+    z-index: 2;
     align-items: center;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 ul li {
@@ -67,6 +63,18 @@ ul li {
 
 a {color: var(--white);}
 
+article {position: relative;}
+
+h3 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+h5, footer {font-size: 10px;}
 
 
 /* Header */
@@ -81,4 +89,83 @@ div.menu-logo.d-flex {justify-content: center;}
 
 .menu-cta a {padding-left: 5px;}
 
+
+
 /* Main */
+main .row {justify-content: space-between;}
+
+/* Shop Article Hover*/
+article img[src*="1.webp"]:hover {content: url("../images/1b.webp");}
+
+article img[src*="2.webp"]:hover {content: url("../images/2b.webp");}
+
+article img[src*="3.webp"]:hover {content: url("../images/3b.webp");}
+
+article img[src*="4.webp"]:hover {content: url("../images/4b.webp");}
+
+article img[src*="5.webp"]:hover {content: url("../images/5b.webp");}
+
+article img[src*="6.webp"]:hover {content: url("../images/6b.webp");}
+
+
+/* Add to Favourite */
+.favourite::before {
+    content: "\2665";
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favourite:hover {color: var(--red);}
+
+
+
+/* Discount & Label */
+div.label {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+.label.discount-30::before {
+    content: "-30%";
+    background-color: var(--red);
+    color: var(--white);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.label.discount-50::before {
+    content: "-50%";
+    background-color: var(--red);
+    color: var(--white);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.label.eco-item::after {
+    content: "Sostenibilità";
+    background-color: var(--green);
+    color: var(--white);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+/* Article Description */
+.new-price {
+    color: var(--red);
+    padding-right: 5px;
+}
+.old-price {text-decoration: line-through;}
+
+
+/* Footer */
